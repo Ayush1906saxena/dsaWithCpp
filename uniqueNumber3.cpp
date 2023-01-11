@@ -11,11 +11,9 @@ void updateSum(vector<int> &arr, int x){
 }
 
 int numFromBits(vector<int> arr){
-	int mul = 1;
 	int res = 0;
 	for(int i = 0; i < 32; i++){
-		res += (arr[i] * mul);
-		mul *= 2;
+		res += (arr[i] * (1 << i));
 	}
 	return res;
 }
